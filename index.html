@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-family: cursive;
+            font-size: 40px;
+            text-align: center;
+            margin: 100,auto;
+            text-transform: uppercase;
+            color: purple;
+
+        }
+        form{
+            text-align: center;
+        }
+        input{padding: 12px;}
+        #result{
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: red;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1> Factorial of a Number</h1>
+<form id="form">
+    <input type="number"name="" id="number"><br><br>
+    <input type="submit" value="Check">
+</form>
+<p id="result">The Factorial number is:</p>
+    <script>
+var frm=document.getElementById("form");
+frm.onsubmit=function(){
+    var num=document.getElementById("number").value;
+    var result=document.getElementById("result");
+    var i, m=1;
+    for (i=1;i<=num;i++){
+        m=m*i;
+    }
+    result.innerHTML=m;
+    return false;
+
+}
+
+
+    </script>
+</body>
+</html>
